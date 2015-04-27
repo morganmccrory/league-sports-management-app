@@ -1,0 +1,24 @@
+<h1>Create New Team</h1>
+
+ <% if @error %>
+<div id="errors"><%= @error %></div>
+ <% end %>
+
+<form method="post" action="/teams">
+
+  <label class="label"><b>Team Name: </b></label>
+  <input type="text" name="name" placeholder="e.g., Mighty Ducks">
+  <br>
+  <br>
+   <label class="label"><b>Sport: </b></label>
+  <input type="text" name="sport" placeholder="e.g., Hockey">
+  <br>
+  <br>
+  <label class="label"><b>Coach: </b></label><br><br>
+  <% User.all.each do |u| %>
+  <input type="radio" name="coach_id" value="<%= u.id %>"> <%= u.first_name %> <%= u.last_name %><br>
+  <% end %>
+  <br>
+  <br>
+  <input type="submit" value="Submit">
+</form>

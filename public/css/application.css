@@ -1,0 +1,89 @@
+body {
+  background-color: #F2F2F2;
+}
+
+.top_border {
+  background-color: black;
+  height: %5;
+}
+
+.top_border h1 {
+  font-family: Arial;
+  font-weight: normal;
+  color: white;
+  margin-left: 1em;
+}
+
+#sports {
+  color: red;
+}
+
+.log-in {
+  float: right;
+  width: 30%;
+  margin-right: 4em;
+  margin-top: 0.5%;
+  padding-top: 0.1em;
+  padding-left: 1em;
+  background-color: white;
+  overflow: hidden;
+}
+
+.log-out {
+  float: right;
+  width: 30%;
+  margin-right: 4em;
+  margin-top: 0.5%;
+  padding-top: 0.1em;
+  padding-left: 1em;
+  background-color: white;
+  overflow: hidden;
+  display: none;
+}
+
+.log-in p {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.create_account_form {
+  float: right;
+  width: 30%;
+  margin-right: 4em;
+  margin-top: 0.5%;
+  padding-top: 0.1em;
+  padding-left: 1em;
+  background-color: white;
+  overflow: hidden;
+  display: none;
+}
+
+.main {
+  float: left;
+  width: 50%;
+  margin-left: 3em;
+  margin-top: 0.5%;
+  padding-left: 2em;
+  background-color: white;
+  overflow: hidden;
+}
+
+.all-teams {
+  margin: 5px 5px;
+}
+
+.new_team_form {
+  display: none;
+  position: relative;
+}
+
+#add_form {
+  float: right;
+  margin-right: 1em;
+  margin-bottom: 1em;
+}
+
+.error {
+  color: red;
+  display: none;
+}

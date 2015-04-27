@@ -1,0 +1,39 @@
+<div class="top_border">
+  <h1>United Chicago <span id="sports">Sports</span> League</h1>
+</div>
+
+<div class="log-in">
+<p>Sign In:</p>
+  <%= erb :"_sign_in" %><br>
+  <a id="create-account" href="/users/new">Create New Account</a>
+</div>
+
+<div class="create_account_form">
+  <%= erb :"_signup" %>
+</div>
+
+<div class="log-out">
+  <a href="/logout">Log Out</a>
+</div>
+
+<div class="main">
+<h2>All Teams</h2>
+<ul>
+<div class="all-teams">
+<% Team.all.each do |t| %>
+  <%= erb :"_all_teams", locals: {t: t} %>
+<%end%>
+</div>
+
+</ul>
+<form id="add_form" action="/teams" method="POST">
+  <input type="submit" value="Add New Team">
+</form>
+
+<div class="error">Invalid team. Please try again.</div>
+
+<div class="new_team_form">
+<h3> Add New Team </h3>
+  <%= erb :"_new_team" %>
+</div>
+</div>

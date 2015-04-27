@@ -1,0 +1,20 @@
+<h2><%= @team.name %></h2>
+<h3><i><%= @team.sport %></i></h3>
+<h3>Coached by: <%= @team.coach.first_name %> <%= @team.coach.last_name %></h3>
+
+<br>
+<br>
+<b>Players:</b>
+<br>
+<ul>
+<% @team.players.each do |p| %>
+  <li> <%= p.first_name %> <%= p.last_name %></li>
+<% end %>
+</ul>
+<br>
+<br>
+<a href="/teams/<%= @team.id %>/edit">Edit This Team</a>
+<br>
+<br>
+<br>
+<a href="/">Back to All Teams</a>

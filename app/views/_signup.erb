@@ -1,0 +1,24 @@
+ <% if @error %>
+<div id="errors"><%= @error %></div>
+ <% end %>
+
+<form method="post" action="/users">
+
+  <label class="label" for="first_name">First Name: </label>
+  <input type="text" name="user[first_name]" placeholder="e.g., morgan">
+  <br>
+  <br>
+   <label class="label" for="last_name">Last Name: </label>
+  <input type="text" name="user[last_name]" placeholder="e.g., mccrory">
+  <br>
+  <br>
+  <label class="label" for="username">Username: </label>
+  <input type="text" name="user[username]" placeholder="must be 3 letters and 3 numbers">
+  <br>
+  <br>
+  <label class="label" for="password">Password: </label>
+  <input type="password" name="user[password]" placeholder="8 or more characters">
+  <br>
+  <br>
+  <input type="submit" value="Sign Up">
+</form>

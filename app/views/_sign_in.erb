@@ -1,0 +1,12 @@
+<% if @error %>
+<div id="errors"><%= @error %></div>
+<% end %>
+
+<form id="sign-in-data" method="post" action="/signin">
+    <label class="label">Username: </label>
+    <input type="text" name="username" placeholder="e.g., abc123"><br><br>
+    <label class="label">Password: </label>
+    <input type="password" name="password">
+    <br><br>
+    <input id="sign-in" type="submit" value="Sign In">
+</form>

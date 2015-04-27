@@ -1,0 +1,21 @@
+<h2>Edit <%= @team.name %></h2>
+
+<% if @error %>
+<div id="errors"><%= @error %></div>
+<% end %>
+
+<form method="post" action="/teams/<%= @team.id %>">
+  <input type="hidden" value="PUT" name="_method">
+    <label class="label">Name: </label>
+    <input type="text" name="team[name]" value="<%= @team.name %>"><br>
+    <label class="label">Password: </label>
+    <input type="text" name="team[sport]" value="<%= @team.sport %>">
+    <br>
+    <input type="submit" value="Update">
+</form>
+<br>
+<br>
+<form action="/teams/<%= @team.id %>" method="POST">
+  <input type="hidden" value="DELETE" name="_method">
+  <input type="submit" value="Delete Team">
+</form>
